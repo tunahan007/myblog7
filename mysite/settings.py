@@ -25,7 +25,7 @@ SECRET_KEY = '4#t#7pj3@lfm84j4+r$bh34gohr-udw#z$7=w*op(%gc)d8=(m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['167.99.121.218']
+
 
 SITE_ID = 1
 
@@ -92,9 +92,7 @@ DATABASES = {
         'default': {
             #'ENGINE': 'django.db.backends.sqlite3',
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'blog',
-            'USER': 'blogger',
-            'PASSWORD': 'Payallar1983',
+            
             # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
