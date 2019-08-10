@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4#t#7pj3@lfm84j4+r$bh34gohr-udw#z$7=w*op(%gc)d8=(m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['167.99.121.218']
 
@@ -80,15 +80,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-if DEBUG:
-    DATABASES = {
-        'default' : {
-            'ENGINE' : 'django.db.backends.sqlite3',
-            'NAME' : os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
-else:
-    DATABASES = {
+# if DEBUG:
+#     DATABASES = {
+#         'default' : {
+#             'ENGINE' : 'django.db.backends.sqlite3',
+#             'NAME' : os.path.join(BASE_DIR, 'db.sqlite3'),
+#         }
+#     }
+# else:
+DATABASES = {
         'default': {
             #'ENGINE': 'django.db.backends.sqlite3',
             'ENGINE': 'django.db.backends.postgresql',
