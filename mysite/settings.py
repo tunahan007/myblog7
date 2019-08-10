@@ -92,9 +92,9 @@ else:
         'default': {
             #'ENGINE': 'django.db.backends.sqlite3',
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'test',
-            'USER': 'tester',
-            'PASSWORD': 'test123',
+            'NAME': 'blog',
+            'USER': 'blogger',
+            'PASSWORD': 'Payallar1983',
             # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
