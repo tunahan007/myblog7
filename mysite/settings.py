@@ -80,16 +80,24 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'test',
-        'USER': 'tester',
-        'PASSWORD': 'test123',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if DEBUG:
+    DATABASES = {
+        'default' : {
+            'ENGINE' : 'django.db.backends.sqlite3',
+            'NAME' : os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            #'ENGINE': 'django.db.backends.sqlite3',
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'test',
+            'USER': 'tester',
+            'PASSWORD': 'test123',
+            # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation
@@ -133,6 +141,7 @@ STATIC_URL = '/static/'
 MEDIA_URL ='/Media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'Media')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 EMAIL_HOST = 'smtp.mail.yahoo.com'
 EMAIL_HOST_USER = 'hilmi_demirkaya@yahoo.de'
