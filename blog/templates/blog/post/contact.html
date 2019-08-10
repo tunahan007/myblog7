@@ -1,0 +1,68 @@
+{% load blog_tags %}
+{% load static %}
+
+{% include "blog/post/includes/header.html" %}
+
+<body>
+{% include "blog/post/includes/nav.html" %}
+
+ <div class="container">
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Title -->
+        <h1 class="mt-4">1001codes</h1>
+
+        <!-- Author -->
+        <p class="lead">
+          by
+          <a href="#">This Page Made By Awesome Django Framework</a>
+        </p>
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p>Posted on January 1, 2019 at 12:00 PM</p>
+
+        <hr>
+
+        <!-- Preview Image -->
+        <!--<img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">-->
+        <img class="img-fluid rounded" src="{% static "alanya.png" %}" alt="">
+
+        <hr>
+
+{% block content %}
+    {% endblock %}
+<form method="post">
+  <div class="form-group">
+    {% csrf_token %}
+    {{ form.as_p }}
+    </div>
+    <button class="btn btn-primary"type="submit" onclick="thanksFunc()">Send</button>
+</form>
+          <p id="thanks"></p>
+
+    </div>
+     {% include "blog/post/includes/sidebar.html" %}
+
+     </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+<script>
+function thanksFunc(){
+var thanks = document.getElementById("thanks");
+var textnode = document.createTextNode("Thanks Your Message Sent");
+document.getElementById("thanks").append(textnode);
+}
+
+</script>
+  {% include "blog/post/includes/footer.html" %}
+</body>
+</html>

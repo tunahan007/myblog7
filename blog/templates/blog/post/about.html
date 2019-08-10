@@ -1,0 +1,51 @@
+{% load blog_tags %}
+{% load static %}
+{% include "blog/post/includes/header.html" %}
+<body>
+{% include "blog/post/includes/nav.html" %}
+
+ <div class="container">
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Title -->
+        <h1 class="mt-4">Coding Blog With Questions, Instructions and Howtos</h1>
+
+        <!-- Author -->
+        <p class="lead">
+          by
+      <a href="#">This Page Made By Awesome Django Framework</a>
+        </p>
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p>Posted on January 1, 2019 at 12:00 PM</p>
+
+        <hr>
+
+        <!-- Preview Image -->
+        <!--<img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">-->
+        <img class="img-fluid rounded" src="{% static "alanya.png" %}" alt="">
+
+        <hr>
+
+          <p>Hi, Welcome to my Blog ! I am Tunahan. I am full stack developer and computer scientist.</p>
+          <p>And this is my Blog, which I build for my own needs, filled with many questions and instructions.I hope
+          you will also find here some useful stuff for your own needs.</p>
+
+    </div>
+     {% include "blog/post/includes/sidebar.html" %}
+
+     </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  {% include "blog/post/includes/footer.html" %}
+</body>
+</html>

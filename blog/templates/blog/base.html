@@ -1,0 +1,50 @@
+{% load blog_tags %}
+{% load static %}
+{% include "blog/post/includes/header.html" %}
+<body>
+	<!-- Navigation -->
+{% include "blog/post/includes/nav.html" %}
+
+ <div class="container">
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Title -->
+        <h1 class="mt-4">Coding Blog With Questions, Howtos and Instructions</h1>
+
+        <!-- Author -->
+        <p class="lead">
+
+          <a href="#">This Page Made By Awesome Django Framework</a>
+        </p>
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p>Posted on January 1, 2019 at 12:00 PM</p>
+
+        <hr>
+
+        <!-- Preview Image -->
+        <!--<img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">-->
+        <img class="img-fluid rounded" src="{% static "/alanya.png" %}" alt="">
+
+        <hr>
+
+  {% block content %}
+    {% endblock %}
+
+    </div>
+     {% include "blog/post/includes/sidebar.html" %}
+
+     </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+ {% include "blog/post/includes/footer.html" %}
+</body>
+</html>
