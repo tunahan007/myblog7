@@ -141,8 +141,4 @@ MEDIA_URL ='/Media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'Media')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-EMAIL_HOST = 'smtp.mail.yahoo.com'
-EMAIL_HOST_USER = 'hilmi_demirkaya@yahoo.de'
-EMAIL_HOST_PASSWORD = 'iwwdlmeyzoucaujs'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+
